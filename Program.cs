@@ -23,6 +23,8 @@ namespace bHapticsServer
             appName = appName ?? "bHapticsMod";
             Console.WriteLine("App Name: " + appName);
 
+            Console.Title = appName;
+
             tactsuitVR = new TactsuitVR(appId, appName);
             CreateUdpServer();
         }
