@@ -41,6 +41,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>libs\Bhaptics.Tact.dll</HintPath>
     </Reference>
+    <Content Include="libs\bhaptics_library.dll">
+      <Link>bhaptics_library.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
