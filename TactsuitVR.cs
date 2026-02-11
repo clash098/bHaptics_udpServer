@@ -1,4 +1,5 @@
-﻿using Bhaptics.SDK2;
+﻿using System;
+using Bhaptics.SDK2;
 using System.Threading;
 
 namespace bHapticsServer
@@ -26,7 +27,7 @@ namespace bHapticsServer
             var HeartBeatThread = new Thread(HeartBeatFunc);
             HeartBeatThread.Start();
             
-            PlaybackHaptics("HeartBeat");
+            StartHeartBeat();
         }
         
         public void HeartBeatFunc()
@@ -48,6 +49,7 @@ namespace bHapticsServer
         public static void PlaybackHaptics(string key, float intensity = 1.0f, float duration = 1.0f, float xzAngle = 0f, float yShift = 0f)
         {
             BhapticsSDK2.Play(key.ToLower(), intensity, duration, xzAngle, yShift);
+            Console.WriteLine($"{key}, {intensity}, {duration}, {xzAngle}, {yShift}");
         }
 
         public void StartHeartBeat()
